@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Button btn;
-    EditText nbMatiere, coefficient;
     TextView moyenne, totalView,note1,note2,note3,note4,note5,note6,note7,note8, message;
     float not1, not2, not3, not4, not5, not6,not7,not8;
 
@@ -41,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
      moyenne = findViewById(R.id.editTextMoyen);
      totalView = findViewById(R.id.editTextTotal);
      message = findViewById(R.id.message);
-     coefficient = findViewById(R.id.textView);
-     nbMatiere = findViewById(R.id.nbMatiere);
      btn = findViewById(R.id.button);
      btn.setOnClickListener(new View.OnClickListener() {
          @SuppressLint("ResourceAsColor")
@@ -92,15 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void  Message( String[] args) {
-        float moyen = Float.parseFloat(String.valueOf(moyenne.getText()));
-        if ( moyen >= 10) {
-            System.out.println("Congrats !");
-        } else {
-            System.out.println("hard luck !");
 
-        }
-    }
 
     private float Total( float not1, float not2, float not3,float not4, float not5,float not6, float not7, float not8, int totNbMat) {
 
